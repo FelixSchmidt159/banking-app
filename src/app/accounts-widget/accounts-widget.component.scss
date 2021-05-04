@@ -1,0 +1,32 @@
+
+#singleAccount:hover {
+  cursor: text;
+  color: #007bff!important;
+  background-color:white;
+}
+
+.list-group-item {
+  border: 0 solid;
+  padding: 0 0 0.75rem 0!important;
+  background-color: rgba(0,0,0,0);
+}
+
+#singleAccount {
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.accounts-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.accounts-viewport {
+  height: 200px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

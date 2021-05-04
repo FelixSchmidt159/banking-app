@@ -1,0 +1,34 @@
+<div class="btn-group mr-3 btn-block">
+  <div class="btn-group btn-block" ngbDropdown #accountdiv="ngbDropdown" role="group"
+       aria-label="Button group with nested dropdown">
+    <button ngbDropdownToggle
+            class="btn btn-light btn-block"
+            id="accountsDropdown">
+      <span class="left-aligned"><em> {{ currAcc.accountType }} </em></span>
+      <span><em> Iban </em></span>
+      <span class="right-aligned"><em> Kontostand </em></span>
+      <br/>
+      <span class="left-aligned"> <strong> {{ currAcc.name }} </strong> </span>
+      <span> <strong> {{ currAcc.iban}} </strong></span>
+      <span class="right-aligned"> <strong>  {{ currAcc.balance | number : '1.2-2' }} € </strong> </span>
+    </button>
+    <div class="dropdown-menu btn-block" id="dropdown-elements" ngbDropdownMenu>
+      <button
+        ngbDropdownItem
+        *ngFor="let acc of accounts"
+        (click)="changeSelectedAccount(acc)">
+        {{ acc.name }}
+        <span class="right-aligned"><em> {{ acc.accountType }} </em></span>
+        <br/>
+        <strong> {{ acc.iban }} </strong>
+        <span class="right-aligned"> <strong>  {{ acc.balance | number : '1.2-2' }} €  </strong> </span>
+      </button>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="$event.stopPropagation(); accountdiv.open();">
+    <fa-icon [icon]="['fas', 'caret-down']" size="1x" class="icon-styling"></fa-icon>
+  </button>
+
+</div>
+

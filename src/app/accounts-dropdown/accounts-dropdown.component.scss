@@ -1,0 +1,24 @@
+fa-icon, .icon-styling {
+  color: azure;
+}
+h4 {
+  text-align: center;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  min-width: 260px !important;
+}
+
+.btn-group {
+  min-width: 220px !important;
+}
+
+#dropdown-elements button:not(:disabled):hover {
+  cursor: pointer;
+  color: #007bff!important;
+  background-color:rgba(100, 100, 100, 0.15)!important;
+}

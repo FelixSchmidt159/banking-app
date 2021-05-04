@@ -1,0 +1,9 @@
+@mixin navbar-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  div {
+    background: mat-color($primary);
+    color: mat-color($primary)
+  }
+}

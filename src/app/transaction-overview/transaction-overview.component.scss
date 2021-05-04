@@ -1,0 +1,40 @@
+table {
+  width: 100%;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.date-block{
+  display: flex;
+}
+.date-block__list{
+  flex-basis: 150px;
+  margin-right: 15px;
+}
+
+::ng-deep .mat-form-field-underline{
+  background-color: #007bff;
+}
+
+.datepick .form-control {
+  width: auto;
+}
+
+.chip {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 8px;
+  padding-left: 12px;
+  display: inline-flex;
+  border-radius: 16px;
+  align-items: center;
+  min-height: 32px;
+  background-color: #007bff;
+  color: white;
+}
+
+.chip-icon {
+  font-size: 18px;
+}

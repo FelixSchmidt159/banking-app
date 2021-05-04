@@ -1,0 +1,21 @@
+
+.chart-canvas {
+  height: 350px;
+}
+
+.chip {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 8px;
+  padding-left: 12px;
+  display: inline-flex;
+  border-radius: 16px;
+  align-items: center;
+  min-height: 32px;
+  background-color: #007bff;
+  color: white;
+}
+
+.chip-icon {
+  font-size: 18px;
+}

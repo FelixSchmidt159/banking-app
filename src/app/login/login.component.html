@@ -1,0 +1,39 @@
+<div class="container h-100">
+  <div class="h-100 justify-content-center align-items-center extra-padding text-center">
+    <div class="row h-100 align-items-center justify-content-center">
+      <div class="col-lg-10">
+        <h2 class="text-center py-2">Anmelden</h2>
+      </div>
+      <div class="col-lg-8">
+        <h5 class="text-center p-2 font-weight-normal">Mit nur einem Login nutzen Sie alle Services der Logo-Bank. Die
+          Anmeldung im Kundenportal wird über eine abgesicherte SSL Verbindung abgewickelt.</h5>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="col-xl-5">
+        <div class="form-group">
+          <label for="username"></label>
+          <input formControlName="username"
+                 type="text"
+                 class="form-control"
+                 id="username"
+                 placeholder="Verfügernummer"
+                 minlength="8"
+                 required>
+        </div>
+        <div class="form-group">
+          <label for="password"></label>
+          <input formControlName="password"
+                 type="password"
+                 class="form-control"
+                 id="password"
+                 placeholder="PIN"
+                 required>
+          <small id="loginHelp" class="form-text text-muted">Geben Sie Ihre Anmeldedaten niemals an Dritte weiter.</small>
+        </div>
+        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-primary btn-block">Login</button>
+        <ngb-alert class="alert-danger mt-3" *ngIf="invalid" (close)="close()">Verfügernummer oder Passwort falsch</ngb-alert>
+      </form>
+    </div>
+  </div>
+</div>

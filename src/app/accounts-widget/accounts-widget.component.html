@@ -1,0 +1,25 @@
+<div class="container px-0">
+  <cdk-virtual-scroll-viewport itemSize="50" class="accounts-viewport">
+  <ul class="list-group make-scrollable">
+    <li class="list-group-item" *cdkVirtualFor="let acc of accounts; let i = index" >
+      <div class="btn-group mr-3 btn-block" *ngIf="hideAccountSum(acc)">
+        <button class="btn btn-light btn-block"
+                id="singleAccount">
+          <span class="left-aligned"> {{ acc.name }} </span>
+          <span class="right-aligned"><em> {{ acc.accountType }} </em></span>
+          <br/>
+          <span class="left-aligned">
+              {{ acc.iban.substring(0, 4) }}
+            ...{{ selectedAccount.iban.substring(16, selectedAccount.iban.length) }}
+            </span>
+          <span class="right-aligned">  {{ acc.balance | number : '1.2-2' }} € </span>
+        </button>
+
+        <button type="button" class="btn btn-primary" (click)="onSubmit(acc)">
+          <fa-icon [icon]="['fas', 'plus']" size="1x" class="icon-styling"></fa-icon>
+        </button>
+      </div>
+    </li>
+  </ul>
+  </cdk-virtual-scroll-viewport>
+</div>

@@ -1,0 +1,18 @@
+<div class="container px-0">
+
+  <app-accounts-dropdown (currAcc)="getAccount($event)"></app-accounts-dropdown>
+
+  <div class="text-center pt-4 pointer" (click)="onSubmit()">
+    <ul class="list-group list-group-flush" *ngFor="let trans of transactions; let i = index">
+      <li class="list-group-item"  *ngIf="i < 4">
+        <div>
+          <span class="left-aligned"> {{ trans.timestamp | date: 'dd. MMMM yyyy' }} </span>
+          <span class="right-aligned" [ngClass]=checkBalance(trans.amount)>
+            {{ trans.amount  | number : '1.2-2' }} €
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>

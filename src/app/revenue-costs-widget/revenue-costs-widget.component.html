@@ -1,0 +1,9 @@
+<div class="container px-0">
+
+  <app-accounts-dropdown class="" (currAcc)="getAccount($event)"></app-accounts-dropdown>
+  <p class="text-center pt-2 mb-0"> {{ current  | date: ' MMMM yyyy' }} </p>
+
+  <div echarts [options]="options" class="demo-chart"  [merge]= "mergeOptions"></div>
+
+</div>
+

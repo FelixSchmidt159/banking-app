@@ -1,0 +1,22 @@
+.card {
+  border-radius: 0.5vw 0.5vw 0.5vw 0.5vw;
+  min-width: 300px!important;
+  min-height: 300px!important;
+}
+
+p {
+  margin: auto;
+}
+
+span {
+  text-align: right;
+}
+
+@mixin widget-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  div {
+    color: mat-color($primary)
+  }
+}
